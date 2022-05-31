@@ -1,0 +1,59 @@
+﻿
+@model List<Haberler>
+
+@{
+    Layout = null;
+}
+
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Haberler...</title>
+
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/js/index.js"></script>
+   
+
+    <style>
+        #container {
+            margin: 200px auto 0px auto;
+            width: 500px;
+            height: 30px;
+            border: 1px solid #808080;
+            overflow:hidden;
+            border-radius:5px;
+        }
+
+        .namebox {
+            padding: 5px;
+            height:20px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div id="container">
+
+        <div id="haberSlider">
+
+            @foreach(var item in Model){
+            <div class="namebox">
+            
+                @item.haberbaslik
+                @item.kisatext
+                @item.tarih
+
+            </div>
+            }
+
+
+            <div id="r"></div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
